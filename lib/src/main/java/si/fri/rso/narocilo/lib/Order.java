@@ -1,12 +1,11 @@
 package si.fri.rso.narocilo.lib;
 
-public class NarociloMetadata {
-
+public class Order {
     private Integer id;
     private Integer client;
     private Integer provider;
-    private String contents;
-    private Float cost;
+    String items;
+    Float cost;
 
     public Integer getId() {
         return id;
@@ -20,24 +19,24 @@ public class NarociloMetadata {
         return client;
     }
 
-    public void setClient(Integer id) {
-        this.client = id;
+    public void setClient(Integer client) {
+        this.client = client;
     }
 
     public Integer getProvider() {
         return provider;
     }
 
-    public void setProvider(Integer id) {
-        this.provider = id;
+    public void setProvider(Integer provider) {
+        this.provider = provider;
     }
 
-    public String getContents() {
-        return contents;
+    public String getItems() {
+        return items;
     }
 
-    public void setContents(String contents) {
-        this.contents = contents;
+    public void setItems(String items) {
+        this.items = items;
     }
 
     public Float getCost() {
@@ -47,4 +46,6 @@ public class NarociloMetadata {
     public void setCost(Float cost) {
         this.cost = cost;
     }
+
+
 }

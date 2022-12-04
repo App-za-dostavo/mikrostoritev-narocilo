@@ -1,13 +1,13 @@
-# mikrostoritev-narocilo
+# RSO: mikrostoritev-narocilo
 
-## Clean and package the project
+## Prerequisites
 
-```bash
+Clean and package the project
+```
 mvn clean package
 ```
 
-## Run the docker-compose file
-```bash
+Run the docker-compose file (use -d flag to run in the background)
+```
 docker-compose up
 ```
-Available at: localhost:8080/v1/narocilo

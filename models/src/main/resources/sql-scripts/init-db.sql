@@ -1,0 +1,1 @@
+INSERT INTO narocilo (client, provider, items, cost) VALUES (1, 2, "Cheeseburger.", 10.0);

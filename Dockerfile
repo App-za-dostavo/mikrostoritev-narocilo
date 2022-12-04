@@ -1,4 +1,4 @@
-FROM adoptopenjdk:15-jre-hotspot
+FROM amazoncorretto:18
 
 RUN mkdir /app
 
