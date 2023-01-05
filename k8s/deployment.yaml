@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: narocilo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: narocilo
+  template:
+    metadata:
+      labels:
+        app: narocilo
+    spec:
+      containers:
+        - image: kimberly3388/narocilo:2023-01-05-13-14-30
+          name: narocilo
+          env:
+            - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
+              value: jdbc:postgresql://manny.db.elephantsql.com:5432/pkrpwhjr
+            - name: KUMULUZEE_DATASOURCES0_USERNAME
+              value: pkrpwhjr
+            - name: KUMULUZEE_DATASOURCES0_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-password
+                  key: KUMULUZEE_DATASOURCES0_PASSWORD
+          ports:
+            - containerPort: 8080
+              name: server
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: narocilo
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: narocilo
