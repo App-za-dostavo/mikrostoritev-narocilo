@@ -54,7 +54,7 @@ public class OrderEntity {
         return items;
     }
 
-    public void setItems(String firstName) {
+    public void setItems(String items) {
         this.items = items;
     }
 
@@ -62,7 +62,7 @@ public class OrderEntity {
         return cost;
     }
 
-    public void setCost(Float distance) {
-        this.cost = distance;
+    public void setCost(Float cost) {
+        this.cost = cost;
     }
 }
