@@ -1,5 +1,6 @@
 package si.fri.rso.narocilo.api.v1.resources;
 
+import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import si.fri.rso.narocilo.lib.Order;
 import si.fri.rso.narocilo.services.beans.OrderBean;
 
@@ -16,6 +17,7 @@ import java.util.List;
 @Path("/narocilo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@CrossOrigin(supportedMethods = "GET, POST, PUT, HEAD, DELETE, OPTIONS")
 public class OrderResource {
 
     @Inject
