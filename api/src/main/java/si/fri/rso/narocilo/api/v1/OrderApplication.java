@@ -9,7 +9,7 @@ import org.eclipse.microprofile.openapi.annotations.servers.Server;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@OpenAPIDefinition(info = @Info(title = "Narocilo API", version = "v1",
+@OpenAPIDefinition(info = @Info(title = "Order API", version = "v1",
         license = @License(name = "dev")),
         servers = @Server(url = "http://localhost:8080/"))
 @ApplicationPath("/v1")
