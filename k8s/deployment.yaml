@@ -13,7 +13,7 @@ spec:
         app: narocilo
     spec:
       containers:
-        - image: kimberly3388/narocilo:2023-01-05-13-14-30
+        - image: tomssojer/narocilo:2023-01-10-10-56-50
           name: narocilo
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
